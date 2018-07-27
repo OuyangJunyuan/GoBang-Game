@@ -1,0 +1,36 @@
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\obj\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\obj\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI - 副本\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\obj\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -11\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -15\GoBang Lib\obj\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\obj\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -15_剪枝不明显\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\bin\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\bin\Debug\GoBang Lib.pdb
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\obj\Debug\GoBang Lib.csprojAssemblyReference.cache
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\obj\Debug\GoBang Lib.csproj.CoreCompileInputs.cache
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\obj\Debug\GoBang Lib.dll
+C:\Users\70654\source\repos\GoBang GUI -23\GoBang Lib\obj\Debug\GoBang Lib.pdb
