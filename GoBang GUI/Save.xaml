@@ -1,0 +1,32 @@
+﻿<Window x:Class="GoBang_GUI.Save"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoBang_GUI"
+        mc:Ignorable="d"
+        Title="Save" Height="500" Width="850" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent" AllowsTransparency="True">
+    <Grid  Height="450" Width="800" Background="LightGray">
+
+        <Image Source="Images\boardline.png" Stretch="Fill" Margin="-11,-10,-11,-10"/>
+        <Image Source="Images\boardline.png" Stretch="Fill" Margin="60,96,384,65"/>
+        <Image  Source="Images\inkline1.png" Margin="533,145,77,268"/>
+        <ListBox Background="Transparent"  Name="plaerNamesListBox" HorizontalAlignment="Left" Height="289" Margin="60,96,0,0" VerticalAlignment="Top" Width="356" ItemsSource="{Binding Path=GamesName}"/>
+        <Label Content="已存棋盘"  Margin="171,19,489,339"   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.341,0.214" FontSize="24" />
+        <TextBox Background="Transparent" Name="newPlaerTextBox"  HorizontalAlignment="Left" Height="23" Margin="553,131,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="棋局命名："  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="444,121,187,290" RenderTransformOrigin="-0.039,1.171" />
+
+        <Label Margin="571,196,141,220" Content="添加"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Image  Source="Images/inkline2.png" Margin="558,220,116,204"/>
+
+        <Label   Margin="480,354,231,64" Content="确定"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+        <Label   Margin="630,354,77,64" Content="取消"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.043,1.719" />
+        <Image  Source="Images/inkline3.png" Margin="487,353,77,-29"/>
+
+        <Button   Name="addNewPlayerButton" Opacity="0" HorizontalAlignment="Left" Margin="579,201,0,0" VerticalAlignment="Top" Width="75"  Height="26" Click="AddNewPlayerButton_Click" RenderTransformOrigin="-0.72,7.346"/>
+        <Button Opacity="0" HorizontalAlignment="Left" Margin="480,354,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="31"/>
+        <Button Opacity="0" HorizontalAlignment="Left" Margin="639,353,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Height="32" RenderTransformOrigin="0.933,-1.25"/>
+
+    </Grid>
+</Window>

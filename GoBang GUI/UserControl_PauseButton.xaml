@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="GoBang_GUI.UserControl_PauseButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GoBang_GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="140">
+    <Grid>
+        <Image Source="Images\Ring.png"/>
+
+        <Label  Name="time_label"  Content="0:30" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Image Opacity="0" Name="line1" Source="Images\inkline1.png" Margin="3,10,-3,-10" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="45.489"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        
+        <Image Opacity="0" Name="line2" Source="Images\inkline4.png" Margin="0,2,0,-2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-43.622"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button  Opacity="0" Click="Button_Click" RenderTransformOrigin="1.85,0.58"/>
+    </Grid>
+</UserControl>

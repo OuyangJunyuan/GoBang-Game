@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="GoBang_GUI.UserControl_ChessButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/exzpression/blend/2008" 
+             xmlns:local="clr-namespace:GoBang_GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="46.666" d:DesignWidth="46.666" Name="Usercontrol">
+    
+    
+    
+    
+    
+    <UserControl.Resources>
+        <Style TargetType="Image" x:Key="TypeImage">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=Usercontrol,Path=Type}" Value="White">
+                    <Setter Property="Source" Value="Images\White.png" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=Usercontrol,Path=Type}" Value="Black">
+                    <Setter Property="Source" Value="Images\Black.png" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
+
+    <Grid  MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+        <Image Name="theTypeImage" Style="{StaticResource ResourceKey=TypeImage}" />
+
+
+
+
+
+
+        <Label  x:Name="NumberLabel"   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  
+                Content="" FontSize="12" />
+        <Image Name="RingImage" Source="Images\Ring4.png"  Opacity="0"  RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform    Angle="0"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+            
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard >
+                        <Storyboard>
+                            <DoubleAnimation From="0" To="3600" RepeatBehavior="Forever" Duration="0:0:10" 
+                                             Storyboard.TargetProperty="(RenderTransform).(TransformGroup.Children)[0].(Angle)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+
+
+    </Grid>
+</UserControl>

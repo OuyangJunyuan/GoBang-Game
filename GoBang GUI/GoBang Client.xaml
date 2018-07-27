@@ -1,0 +1,170 @@
+﻿<Window x:Class="GoBang_GUI.GoBang_Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoBang_GUI"
+        mc:Ignorable="d"
+        Title="GoBang Game Client" MaxWidth="1600" MaxHeight="900" MinHeight="900" MinWidth="1600"  Width="1600" Height="900"  Background="Transparent" AllowsTransparency="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" >
+
+    <Grid  Name="GameScreen" Width="1500" Height="800">
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard >
+                    <Storyboard>
+                        <DoubleAnimation From="0" To="1500" AutoReverse="False" Duration="0:0:2" 
+                                             Storyboard.TargetProperty="Width"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+
+        <Grid Name="Outline"  IsHitTestVisible="False" Opacity="1">
+            <Image Source="Images\draw.png" Margin="-30,-50,-30,-50"  Stretch="Fill" />
+            <Image Source="Images\boardline.png" Stretch="Fill" IsHitTestVisible="False" Margin="45,15,45,15" />
+        </Grid>
+
+        <Grid Width="1500" Height="700" x:Name="gameClient" Opacity="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  x:Name="BoardGrid" Width="700" Height="700" MouseUp="Grid_MouseUp" Grid.Column="1" Grid.RowSpan="5">
+                <Image Source="Images\BackGround6.png"  Stretch="Fill"  />
+                <local:UserControl_BoardGrid  />
+                <local:UserControl_ChessBoard x:Name="cb_client" Width="700" Height="700"  />
+            </Grid>
+
+            <local:UserControl_PauseButton x:Name="pb_client"   Width="140" Height="140"  Grid.Column="0" Grid.Row="1"/>
+
+            <Grid x:Name="UserControl_NewGameButton" Grid.Column="0" Grid.Row="2" Width="140" Height="140">
+                <Image  Source="Images\BlackRing1.png"/>
+                <Label Content="重置" FontSize="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Button Opacity="0" Click="NewGame"/>
+            </Grid>
+
+            <Grid x:Name="UserControl_RetractButton" Grid.Column="0" Grid.Row="3" Width="140" Height="140">
+                <Image  Source="Images\BlackRing.png"/>
+                <Label Content="悔棋" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="45"/>
+                <Button Opacity="0" Click="Retract"/>
+            </Grid>
+
+            <Label x:Name="label1" Content="搜索节点个数:0" Grid.Column="2"  Grid.Row="4" Height="112" Width="158" FontSize="16"/>
+
+            <Grid Grid.Column="2" Grid.Row="3"  Width="140" Height="140" >
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="time_label"  Content="返回" FontSize="45" />
+                <Image Source="Images\BlackRing4.png"/>
+                <Button   Click="Goback"  Opacity="0"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="2"  Width="140" Height="140" >
+                <Label  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="存档" FontSize="45" />
+                <Image Source="Images\BlackRing2.png" RenderTransformOrigin="0.5,0.5" Margin="-6,0,6,0">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="82.629"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Button  Click="Button_Click"  Opacity="0" RenderTransformOrigin="0.5,0.5"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="1"  Width="140" Height="140" >
+                <local:UserControl_MusicPlayer  x:Name="bgmplayer"/>
+            </Grid>
+        </Grid>
+
+        <Grid Width="1500" Height="700" Name="BeginGrid" Background="Transparent" Opacity="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600*"/>
+                <ColumnDefinition Width="300*"/>
+                <ColumnDefinition Width="600*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation From="-2" To="1" AutoReverse="False" Duration="0:0:2" 
+                                             Storyboard.TargetProperty="Opacity"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+                <Image   Source="Images\kuang.png" Stretch="Fill"  />
+                <Label Name="beginlabel" Content="开始游戏"  FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Button Name="Begin_startbutton"  Click="Begin_startbutton_Click"  Opacity="0"/>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1" >
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation From="-2" To="1" AutoReverse="False" Duration="0:0:2" 
+                                             Storyboard.TargetProperty="Opacity"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+                <Image   Source="Images\kuang.png"  Stretch="Fill" />
+                <Label Content="关于"  FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   />
+                <Button Name="About_button" Content="About"  Click="About_button_Click" Opacity="0"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1" >
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation From="-2" To="1" AutoReverse="False" Duration="0:0:2" 
+                                             Storyboard.TargetProperty="Opacity"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+                <Image   Source="Images\kuang.png"  Stretch="Fill" />
+                <Label Content="复盘"  FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+                <Button Name="Recover_button" Content="About"   Opacity="0" Click="Recover_button_Click"/>
+            </Grid>
+
+            <Grid Grid.Row="4" Grid.Column="1" >
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation From="-2" To="1" AutoReverse="False" Duration="0:0:2" 
+                                             Storyboard.TargetProperty="Opacity"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+                <Image   Source="Images\kuang.png"  Stretch="Fill" />
+                <Label Content="退出"  FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"   />
+                <Button Name="Exit"    Opacity="0" Click="Exit_Click"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

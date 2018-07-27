@@ -1,0 +1,45 @@
+﻿<Window x:Class="GoBang_GUI.Recover"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoBang_GUI"
+        mc:Ignorable="d"
+        Title="Recover" Height="500" Width="850" Background="Transparent" AllowsTransparency="True" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Height="450" Width="800" Background="LightGray">
+        <Image Source="Images\boardline.png" Stretch="Fill" Margin="-11,-10,-11,-10"/>
+        <Image Source="Images\boardline.png" Stretch="Fill" Margin="60,80,60,120"/>
+        <ListBox  Background="Transparent" Name="plaerNamesListBox" HorizontalAlignment="Left" Height="250" Margin="60,80,0,0" VerticalAlignment="Top" Width="671" ItemsSource="{Binding Path=GamesName}"/>
+        <Label Content="已有存档" HorizontalAlignment="Left" Margin="360,10,0,0" VerticalAlignment="Top" Height="51" Width="134" FontSize="25"/>
+        <Label RenderTransformOrigin="-7.35,8.7" Margin="299,374,426,51" Content="确定"/>
+        <Label RenderTransformOrigin="-7.35,8.7" Margin="447,372,298,53" Content="删除"/>
+        <Image Source="Images\inkline4.png" Margin="0,399,0,3"/>
+        <Button Opacity="0" Content="_OK" HorizontalAlignment="Left" Margin="287,375,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Opacity="0" Content="_Remove" HorizontalAlignment="Left" Margin="434,374,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+
+        <Image Source="Images\inkline4.png" Margin="726,26,-14,407" RenderTransformOrigin="1.244,-11.219">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="46.142"/>
+                    <TranslateTransform X="123.542" Y="108.398"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Images\inkline2.png" Margin="734,16,-9,411" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.387"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Button Opacity="0" HorizontalAlignment="Left" Margin="739,0,0,0" VerticalAlignment="Top" Width="61" Click="Button_Click_2" RenderTransformOrigin="1.262,2.509" Height="61"/>
+
+    </Grid>
+</Window>
